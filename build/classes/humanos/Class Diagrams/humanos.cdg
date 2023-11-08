@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Sistema de Gestión de Recursos Humanos Empresariales">
+  <ClassDiagramComponents>
+    <Class name="Contact" package="" visibility="public" xPosition="46.0" yPosition="13.0">
+      <Fields>
+        <Field name="cellPhone" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addContactInfo" returnType="void" visibility="public"/>
+        <Method name="getContactInfo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Company" package="" visibility="public" xPosition="472.0" yPosition="13.0">
+      <Fields>
+        <Field name="diary" type="diary[]" visibility="private"/>
+        <Field name="employee" type="employee[]" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addEmployee" returnType="void" visibility="public"/>
+        <Method name="calculatesTotalSalaries" returnType="void" visibility="public"/>
+        <Method name="getEmployees" returnType="void" visibility="public"/>
+        <Method name="removeEmployee" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="" visibility="public" xPosition="426.0" yPosition="376.0">
+      <Fields>
+        <Field name="dateOfhire" type="date" visibility="private"/>
+        <Field name="department" type="department[]" visibility="private"/>
+        <Field name="salary" type="double" visibility="private"/>
+        <Field name="perfomanceEvaluation" type="perfomanceEvaluation[]" visibility="private"/>
+        <Field name="person" type="person[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addLicense" returnType="void" visibility="public"/>
+        <Method name="assignToDepartment" returnType="void" visibility="public"/>
+        <Method name="evaluatePerformance" returnType="void" visibility="public"/>
+        <Method name="getLicenses" returnType="void" visibility="public"/>
+        <Method name="getSalary" returnType="void" visibility="public"/>
+        <Method name="requestVacation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="" visibility="public" xPosition="31.0" yPosition="236.0">
+      <Fields>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="fullName" type="String" visibility="private"/>
+        <Field name="phoneNumber" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAge" returnType="void" visibility="public"/>
+        <Method name="getFullName" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Salary" package="" visibility="public" xPosition="31.0" yPosition="511.0">
+      <Fields>
+        <Field name="paymentDate" type="date" visibility="private"/>
+        <Field name="monthlySalary" type="double" visibility="private"/>
+        <Field name="employee" type="employee[]" visibility="private"/>
+        <Field name="licenses" type="licenses[]" visibility="private"/>
+        <Field name="vacation" type="vacation[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculateTotalEanirngs" returnType="void" visibility="public"/>
+        <Method name="getSalaryDetails" returnType="void" visibility="public"/>
+        <Method name="setBaseSalary" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Department" package="" visibility="public" xPosition="820.0" yPosition="49.0">
+      <Fields>
+        <Field name="employee" type="employee[]" visibility="private"/>
+        <Field name="jobTitle" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addEmployee" returnType="void" visibility="public"/>
+        <Method name="assignManager" returnType="void" visibility="public"/>
+        <Method name="getDepartmentName" returnType="void" visibility="public"/>
+        <Method name="getEmployees" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Diary" package="" visibility="public" xPosition="1267.0" yPosition="13.0">
+      <Fields>
+        <Field name="employee" type="employee[]" visibility="private"/>
+        <Field name="licenses" type="licenses[]" visibility="private"/>
+        <Field name="vacation" type="vacation[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="readEntries" returnType="void" visibility="public"/>
+        <Method name="writeEntry" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vacation" package="" visibility="public" xPosition="1254.0" yPosition="445.0">
+      <Fields>
+        <Field name="endingDate" type="date" visibility="private"/>
+        <Field name="startDate" type="date" visibility="private"/>
+        <Field name="employee" type="employee[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="approveVacation" returnType="void" visibility="public"/>
+        <Method name="requestVacation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PerfomanceEvaluation" package="" visibility="public" xPosition="939.0" yPosition="433.0">
+      <Fields>
+        <Field name="date" type="date" visibility="private"/>
+        <Field name="result" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addContactInfo" returnType="void" visibility="public"/>
+        <Method name="evaluateEmployee" returnType="void" visibility="public"/>
+        <Method name="getContacInfo" returnType="void" visibility="public"/>
+        <Method name="scheduleEvaluation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Licenses" package="" visibility="public" xPosition="1483.0" yPosition="445.0">
+      <Fields>
+        <Field name="endingDate" type="date" visibility="private"/>
+        <Field name="startDate" type="date" visibility="private"/>
+        <Field name="employee" type="employee[]" visibility="private"/>
+        <Field name="typeOfLicense" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addLicense" returnType="void" visibility="public"/>
+        <Method name="renewLicence" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="dependencia" source="Licenses" target="Diary" sourceCardinality="1..*" targetCardinality="1..1"/>
+    <HasRelation name="composicion" source="Department" target="Employee" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Employee" target="Person"/>
+    <UseRelation name="dependencia" source="Company" target="Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="dependencia" source="Employee" target="Diary" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="dependencia" source="PerfomanceEvaluation" target="Diary" sourceCardinality="1..*" targetCardinality="1..1"/>
+    <UseRelation name="dependencia" source="Vacation" target="Diary" sourceCardinality="1..*" targetCardinality="1..1"/>
+    <HasRelation name="agregacion" source="Person" target="Contact" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Company" target="Person"/>
+    <HasRelation name="composicion" source="Company" target="Department" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="dependencia" source="Person" target="Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="composicion" source="Company" target="Employee" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="composicion " source="Employee" target="Salary" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
